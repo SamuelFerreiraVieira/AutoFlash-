@@ -1,0 +1,231 @@
+/* src/styles/Formulario.css */
+
+.Caixa {
+  width: 100%;
+  margin: 75px auto;
+  padding: 15px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  overflow: hidden;
+
+  /* ✅ NOVO: borda no container principal */
+  border: 1px solid #e5e7eb;
+}
+
+.Caixa h1 {
+  font-size: 22px;
+  font-weight: 600;
+  text-align: left;
+  margin-bottom: 25px;
+  color: var(--cor-titulo);
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--cor-borda-campo);
+}
+
+.form-group {
+  display: flex;
+  justify-content: space-between;
+  gap: 25px;
+  margin-bottom: 20px;
+  flex-wrap: nowrap;
+}
+
+.campo-container {
+  flex: 1;
+}
+
+/* ✅ NOVO: borda/“card” suave em cada bloco (sem mudar a estrutura) */
+.campo-container {
+  border: 1px solid #eef2f7;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 12px;
+  box-shadow: 0 1px 0 rgba(17, 24, 39, 0.04);
+}
+
+/* Pra não “amassar” quando for só um campo na linha */
+.form-group .campo-container {
+  min-width: 0;
+}
+
+.campo-container label {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--cor-texto);
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+}
+
+.campo-container label i {
+  font-size: 16px;
+  margin-right: 8px;
+  color: var(--cor-icone);
+}
+
+.campo-container input,
+.campo-container select {
+  width: 100%;
+  height: 45px;
+  background: #fff;
+  border: 1px solid var(--cor-borda-campo);
+  border-radius: 8px;
+  outline: none;
+  font-size: 15px;
+  padding: 0 15px;
+  color: var(--cor-texto);
+  box-shadow: inset 0 1px 3px var(--sombra);
+  transition: all 0.2s ease;
+}
+
+.campo-container input:focus,
+.campo-container select:focus {
+  border-color: var(--cor-link);
+  box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.2);
+}
+
+.campo-container input::placeholder {
+  color: #a4b0be;
+}
+
+.validacao {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ffbe76;
+  background-color: #ffeaa7;
+  padding: 5px 10px;
+  border-radius: 8px;
+  font-size: 12px;
+  color: #d68100;
+  margin-top: 8px;
+  white-space: nowrap;
+}
+
+.botaozin {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.botaozin button {
+  width: 100%;
+  max-width: 420px;
+  height: 55px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
+  background-color: #1e40af;
+  transition: background-color 0.3s ease;
+}
+
+.botaozin button:hover {
+  background-color: #3b76b9;
+}
+
+@media (max-width: 768px) {
+  .form-group {
+    flex-direction: column;
+  }
+}
+
+.icone-com-espaco {
+  margin-right: 8px;
+}
+
+.label-container {
+  display: flex;
+  align-items: center;
+}
+
+.error-message {
+  color: red;
+  font-size: 14px;
+  margin-top: 4px;
+}
+
+/* ===== Termos (Regras / LGPD) ===== */
+.termo-box {
+  margin-top: 8px;
+  border: 2px solid #cbd5e1; /* ✅ NOVO: borda mais visível */
+  background: linear-gradient(180deg, #fafafa 0%, #ffffff 100%);
+  border-radius: 12px;
+  padding: 14px 14px;
+  max-height: 220px;
+  overflow-y: auto;
+
+  font-size: 13px;
+  line-height: 1.55;
+  color: #374151;
+
+  /* ✅ NOVO: “card” mais evidente */
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.7),
+    0 6px 18px rgba(15, 23, 42, 0.06);
+}
+
+/* Barrinha de rolagem mais clean (Chrome/Edge) */
+.termo-box::-webkit-scrollbar {
+  width: 10px;
+}
+.termo-box::-webkit-scrollbar-track {
+  background: #f3f4f6;
+  border-radius: 999px;
+}
+.termo-box::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 999px;
+  border: 2px solid #f3f4f6;
+}
+.termo-box::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Checkbox + texto alinhados e com cara de "cardzinho" */
+.termo-check {
+  margin-top: 12px;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+
+  padding: 12px 12px;
+  border: 2px solid #cbd5e1; /* ✅ NOVO: borda mais visível */
+  border-radius: 12px;
+  background: #ffffff;
+
+  cursor: pointer;
+  user-select: none;
+
+  /* ✅ NOVO: sombra leve */
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.06);
+}
+
+.termo-check input[type="checkbox"] {
+  margin-top: 2px;
+  width: 18px;
+  height: 18px;
+  accent-color: #1e40af;
+  cursor: pointer;
+}
+
+.termo-check span {
+  font-size: 13px;
+  color: #111827;
+  line-height: 1.35;
+}
+
+/* Estado de erro nos checks */
+.termo-check--erro {
+  border-color: #f59e0b;
+  background: #fffbeb;
+}
+
+/* Botão desabilitado: mostra claramente que falta marcar */
+.botaozin button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  background-color: #1e40af;
+}

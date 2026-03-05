@@ -1,0 +1,21 @@
+/* src/App.css */
+@charset "UTF-8";
+
+/* Reset básico e estilos globais */
+* {
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow-x: hidden;
+}
+
+:root {
+    --cor-fundo-geral: #f1f2f6;
+    --cor-caixa-fundo: #ffffff;
+    --cor-borda-campo: #dfe4ea;
+    --cor-texto: #485460;
+    --cor-titulo: #2d3436;
+    --cor-link: #4a90e2;
+    --cor-icone: #a4b0be;
+    --sombra: rgba(0, 0, 0, 0.05);
+}
+

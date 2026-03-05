@@ -1,0 +1,72 @@
+/* Fundo fixo */
+/* Faz o background preencher 100% da tela */
+.painel-background {
+  position: fixed;       /* cobre sempre a tela inteira */
+  top: 0;
+  left: 0;
+  width: 100vw;          /* largura total da viewport */
+  height: 100vh;         /* altura total da viewport */
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  background: url("/TelaTv.png") no-repeat center center;
+  background-size: cover; /* cobre toda a tela */
+}
+
+
+
+/* Conteúdo alinhado à direita */
+.painel-conteudo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-right: 340px; /* espaço da borda direita */
+}
+
+/* Caixa principal */
+.painel-chamada {
+  display: flex;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Coluna da senha */
+.coluna-senha {
+  flex: 1;
+  background: #fff;
+  padding: 40px 20px;
+  text-align: right;
+}
+
+.numero-senha {
+  font-size: 8rem;
+  color: #00bcd4; /* ciano */
+  margin: 0;
+}
+
+.texto-senha {
+  font-size: 2.0rem;
+  color: #00bcd4;
+  margin-top: 40px;
+}
+
+/* Coluna do cliente */
+.coluna-cliente {
+  flex: 2;
+  background: #00bcd4; /* ciano */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+.nome-cliente {
+  font-size: 3rem;
+  color: #fff;
+  margin: 0;
+  text-align: center;
+}
